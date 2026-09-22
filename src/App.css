@@ -767,15 +767,11 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 60px;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 
 .areas-header h2 {
-  margin: 0;
-  color: var(--burgundy-dark);
-  font-size: clamp(58px, 6vw, 96px);
-  line-height: 0.86;
-  letter-spacing: -0.045em;
+  display: none;
 }
 
 .areas-description {
@@ -1833,4 +1829,1598 @@
   flex-shrink: 0 !important;
   position: relative;
   top: 1px;
+}
+/* =========================================
+   NOVA SEÇÃO — ATUAÇÃO INTERNACIONAL
+========================================= */
+
+.international-section {
+  min-height: 820px;
+  padding: 90px 5vw;
+  background: var(--burgundy-dark);
+  color: var(--cream);
+  overflow: hidden;
+}
+
+.international-main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(360px, 1.05fr) minmax(300px, 0.8fr) minmax(390px, 1fr);
+  gap: 45px;
+  align-items: center;
+}
+
+/* ---------- TEXTO ---------- */
+
+.international-copy {
+  align-self: center;
+}
+
+.international-copy .section-eyebrow {
+  margin-bottom: 28px;
+  color: var(--gold);
+}
+
+.international-copy h2 {
+  margin: 0;
+  color: var(--cream-light);
+  font-size: clamp(58px, 5.4vw, 88px);
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+}
+
+.international-text {
+  max-width: 590px;
+  margin: 38px 0 0;
+  color: rgba(244, 239, 232, 0.72);
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.international-button {
+  width: fit-content;
+  margin-top: 38px;
+  padding: 15px 23px;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.international-button:hover {
+  background: var(--gold);
+  color: var(--burgundy-dark);
+  transform: translateY(-2px);
+}
+
+/* ---------- PASSAPORTE ---------- */
+
+.international-visual {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passport {
+  position: relative;
+  z-index: 3;
+  width: 205px;
+  height: 285px;
+  padding: 34px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: linear-gradient(145deg, #173f6b, #082544);
+  border: 1px solid rgba(214, 185, 113, 0.65);
+  border-radius: 7px;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.3);
+  transform: rotate(-8deg);
+}
+
+.passport-country {
+  color: var(--gold);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.passport-symbol {
+  margin: 18px 0 12px;
+  color: var(--gold);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.passport-title {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.passport-chip {
+  margin-top: 10px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.passport-airplane {
+  position: absolute;
+  z-index: 5;
+  top: 27%;
+  right: 17%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold);
+  color: var(--burgundy-dark);
+  border-radius: 50%;
+  font-size: 23px;
+  transform: rotate(12deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- ÓRBITAS ---------- */
+
+.international-orbit {
+  position: absolute;
+  width: 390px;
+  height: 230px;
+  border: 1px solid rgba(244, 239, 232, 0.14);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-one {
+  transform: rotate(25deg);
+}
+
+.orbit-two {
+  transform: rotate(-25deg);
+}
+
+.international-caption {
+  position: absolute;
+  left: 8%;
+  bottom: 12%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: rgba(244, 239, 232, 0.4);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+/* ---------- SERVIÇOS ---------- */
+
+.international-services {
+  padding: 30px 30px 24px;
+  border: 1px solid rgba(182, 154, 104, 0.5);
+  border-radius: 18px;
+  background: rgba(33, 9, 15, 0.2);
+}
+
+.services-title {
+  margin: 0 0 17px;
+  color: var(--cream);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  font-weight: 500;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item {
+  min-height: 62px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(182, 154, 104, 0.2);
+}
+
+.service-item span {
+  color: var(--gold);
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+}
+
+.service-item p {
+  margin: 0;
+  color: rgba(244, 239, 232, 0.85);
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 300;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 1100px) {
+  .international-main {
+    grid-template-columns: 1fr 0.8fr;
+  }
+
+  .international-services {
+    grid-column: 1 / -1;
+  }
+
+  .international-visual {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 760px) {
+  .international-section {
+    padding: 80px 6vw;
+  }
+
+  .international-main {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .international-copy h2 {
+    font-size: clamp(54px, 15vw, 76px);
+  }
+
+  .international-visual {
+    min-height: 470px;
+  }
+
+  .international-services {
+    padding: 25px 20px;
+  }
+
+  .service-item {
+    min-height: 68px;
+  }
+
+  .service-item p {
+    font-size: 12px;
+  }
+}
+/* =========================================
+   COMPOSIÇÃO — ATUAÇÃO INTERNACIONAL
+========================================= */
+
+.international-main {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  align-items: center;
+}
+
+/* ESQUERDA */
+.international-copy {
+  width: 100%;
+  padding-right: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.international-copy h2 {
+  max-width: 560px;
+}
+
+/* CENTRO */
+.international-visual {
+  width: 100%;
+  min-width: 0;
+  min-height: 560px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PASSAPORTE exatamente no centro da coluna */
+.international-visual .passport {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+}
+
+/* Avião acompanha o passaporte */
+.international-visual .passport-airplane {
+  top: 27%;
+  right: 19%;
+}
+
+/* Órbitas ficam centralizadas */
+.international-visual .international-orbit {
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+}
+
+.international-visual .orbit-one {
+  transform: translate(-50%, -50%) rotate(25deg);
+}
+
+.international-visual .orbit-two {
+  transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+/* Legenda abaixo do passaporte */
+.international-caption {
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+}
+
+/* DIREITA */
+.international-services {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+  z-index: 3;
+}
+/* =========================================
+   CORREÇÃO DEFINITIVA — GRID INTERNACIONAL
+========================================= */
+
+.international-main {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  gap: 0 !important;
+}
+
+/* ESQUERDA */
+.international-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  padding-right: 70px !important;
+}
+
+/* CENTRO */
+.international-visual {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 560px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* PASSAPORTE */
+.international-visual .passport {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) rotate(-8deg) !important;
+}
+
+/* ÓRBITAS */
+.international-visual .international-orbit {
+  left: 50% !important;
+  top: 50% !important;
+}
+
+.international-visual .orbit-one {
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+
+.international-visual .orbit-two {
+  transform: translate(-50%, -50%) rotate(-25deg) !important;
+}
+
+/* DIREITA */
+.international-services {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  max-width: 500px !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  justify-self: end !important;
+}
+/* =========================================
+   CORREÇÃO — ESTRUTURA DA ATUAÇÃO INTERNACIONAL
+========================================= */
+
+.international-section {
+  display: block !important;
+}
+
+.international-main {
+  width: 100% !important;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 0 !important;
+}
+/* =========================================
+   ALTURA — ATUAÇÃO INTERNACIONAL
+========================================= */
+
+.international-section {
+  min-height: 900px !important;
+  padding-top: 110px !important;
+  padding-bottom: 110px !important;
+}
+
+.international-main {
+  min-height: 680px !important;
+}
+/* TAMANHO DO PASSAPORTE */
+.passport-image {
+  width: 520px;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+/* =========================================
+   COMO PODEMOS AJUDAR
+========================================= */
+
+.help-section {
+  padding: 125px 7vw 110px;
+  background: var(--cream-light);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.help-header {
+  max-width: 1200px;
+  margin: 0 auto 70px;
+}
+
+.help-header .section-eyebrow {
+  margin-bottom: 28px;
+}
+
+.help-header h2 {
+  margin: 0;
+  color: var(--burgundy-dark);
+  font-size: clamp(54px, 5.5vw, 82px);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.help-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.help-card {
+  min-height: 330px;
+  padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--cream);
+  border: 1px solid rgba(90, 23, 37, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(90, 23, 37, 0.22);
+  box-shadow: 0 18px 45px rgba(33, 9, 15, 0.08);
+}
+
+.help-card-dark {
+  background: var(--burgundy-dark);
+  color: var(--cream);
+}
+
+.help-number {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 22px;
+  color: var(--gold);
+}
+
+.help-card > div {
+  max-width: 520px;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+.help-card h3 {
+  margin: 0 0 18px;
+  color: var(--burgundy-dark);
+  font-size: clamp(32px, 3vw, 46px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+}
+
+.help-card-dark h3 {
+  color: var(--cream);
+}
+
+.help-card p {
+  max-width: 470px;
+  margin: 0;
+  color: rgba(32, 26, 27, 0.65);
+  font-size: 14px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.help-card-dark p {
+  color: rgba(244, 239, 232, 0.7);
+}
+
+.help-card > svg {
+  color: var(--burgundy);
+  transition: transform 0.3s ease;
+}
+
+.help-card-dark > svg {
+  color: var(--gold);
+}
+
+.help-card:hover > svg {
+  transform: translateX(6px);
+}
+
+/* ---------- CTA ---------- */
+
+.help-cta {
+  max-width: 1200px;
+  margin: 70px auto 0;
+  padding-top: 45px;
+  border-top: 1px solid rgba(90, 23, 37, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.help-cta p {
+  margin: 0;
+  color: rgba(32, 26, 27, 0.62);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.help-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 22px;
+  background: var(--burgundy-dark);
+  color: var(--cream);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.help-whatsapp:hover {
+  transform: translateY(-2px);
+  background: var(--burgundy);
+}
+
+.help-whatsapp svg {
+  color: var(--gold);
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 800px) {
+  .help-section {
+    padding: 90px 6vw 80px;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-card {
+    min-height: 300px;
+  }
+
+  .help-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .help-header h2 {
+    font-size: clamp(48px, 13vw, 70px);
+  }
+
+  .help-card {
+    padding: 26px;
+  }
+
+  .help-card h3 {
+    font-size: 36px;
+  }
+}
+/* =========================================
+   AVALIAÇÕES
+========================================= */
+
+.reviews-section {
+  padding: 125px 7vw 110px;
+  background: var(--cream);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.reviews-header {
+  max-width: 1200px;
+  margin: 0 auto 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.reviews-header h2 {
+  margin: 0;
+  color: var(--burgundy-dark);
+  font-size: clamp(54px, 5.5vw, 82px);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.reviews-rating {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.reviews-rating strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--burgundy-dark);
+  font-size: 58px;
+  line-height: 0.8;
+  font-weight: 500;
+}
+
+.reviews-stars,
+.review-stars {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+}
+
+.reviews-rating span {
+  color: rgba(32, 26, 27, 0.58);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- CARDS ---------- */
+
+.reviews-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.review-card {
+  min-height: 330px;
+  padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--cream-light);
+  border: 1px solid rgba(90, 23, 37, 0.1);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(90, 23, 37, 0.2);
+  box-shadow: 0 18px 45px rgba(33, 9, 15, 0.07);
+}
+
+.review-card-dark {
+  background: var(--burgundy-dark);
+  color: var(--cream);
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-number {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--gold);
+  font-size: 21px;
+}
+
+.review-card blockquote {
+  max-width: 560px;
+  margin: auto 0 35px;
+  color: var(--burgundy-dark);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(25px, 2.1vw, 34px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.review-card-dark blockquote {
+  color: var(--cream);
+}
+
+.review-author {
+  color: rgba(32, 26, 27, 0.62);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.review-card-dark .review-author {
+  color: rgba(244, 239, 232, 0.62);
+}
+
+/* ---------- RODAPÉ DA SEÇÃO ---------- */
+
+.reviews-footer {
+  max-width: 1200px;
+  margin: 65px auto 0;
+  padding-top: 35px;
+  border-top: 1px solid rgba(90, 23, 37, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.reviews-footer p {
+  margin: 0;
+  color: rgba(32, 26, 27, 0.62);
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.reviews-google-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 21px;
+  border: 1px solid rgba(90, 23, 37, 0.25);
+  color: var(--burgundy-dark);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.reviews-google-button:hover {
+  background: var(--burgundy-dark);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 800px) {
+  .reviews-section {
+    padding: 90px 6vw 80px;
+  }
+
+  .reviews-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  .reviews-rating {
+    align-items: flex-start;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    min-height: 300px;
+  }
+
+  .reviews-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-header h2 {
+    font-size: clamp(48px, 13vw, 70px);
+  }
+
+  .review-card {
+    padding: 26px;
+  }
+
+  .review-card blockquote {
+    font-size: 29px;
+  }
+}
+/* =========================================================
+   NOVA SEÇÃO — AVALIAÇÕES EDITORIAL
+   ========================================================= */
+
+.reviews-section {
+  position: relative;
+  padding: 95px 6vw 55px !important;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(182, 154, 104, 0.08), transparent 28%),
+    var(--cream-light) !important;
+  color: var(--text);
+  overflow: hidden;
+}
+
+.reviews-editorial {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* ---------------------------------------------------------
+   CABEÇALHO
+   --------------------------------------------------------- */
+
+.reviews-intro {
+  width: 46%;
+  position: relative;
+  z-index: 2;
+}
+
+.reviews-intro .section-eyebrow {
+  margin-bottom: 28px;
+}
+
+.reviews-intro h2 {
+  margin: 0;
+  color: var(--burgundy-dark);
+  font-size: clamp(58px, 5.7vw, 88px);
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.reviews-intro-text {
+  max-width: 530px;
+  margin: 28px 0 0;
+  color: rgba(32, 26, 27, 0.68);
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+
+/* ---------------------------------------------------------
+   NOTA GOOGLE
+   --------------------------------------------------------- */
+
+.reviews-google {
+  position: absolute;
+  top: 62px;
+  left: 51%;
+  width: 390px;
+  z-index: 3;
+}
+
+.google-label {
+  margin: 0 0 18px;
+  color: var(--burgundy);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.google-rating {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.google-rating > strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--burgundy-dark);
+  font-size: 92px;
+  line-height: 0.75;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.google-rating-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 7px;
+}
+
+.google-stars {
+  color: var(--gold);
+  font-size: 21px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.google-rating-info > span {
+  color: rgba(32, 26, 27, 0.62);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+}
+
+.google-profile-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(90, 23, 37, 0.13);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.google-profile-link:hover {
+  opacity: 0.78;
+  transform: translateX(3px);
+}
+
+.google-letter {
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    #4285f4 0 25%,
+    #34a853 25% 50%,
+    #fbbc05 50% 75%,
+    #ea4335 75% 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.google-profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.google-profile-text strong {
+  color: var(--text);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.google-profile-text small {
+  color: var(--burgundy);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+
+/* ---------------------------------------------------------
+   FOTO DA EDUARDA
+   --------------------------------------------------------- */
+
+.reviews-photo {
+  position: absolute;
+  top: -95px;
+  right: -6vw;
+  width: 360px;
+  height: 505px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.reviews-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--cream-light) 0%,
+      rgba(250, 248, 244, 0.15) 22%,
+      transparent 55%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(250, 248, 244, 0.65),
+      transparent 28%
+    );
+  pointer-events: none;
+}
+
+.reviews-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: sepia(0.08) saturate(0.82) contrast(0.94);
+}
+
+.reviews-photo-caption {
+  position: absolute;
+  right: 28px;
+  top: 185px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 250, 242, 0.88);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 27px;
+  line-height: 0.95;
+  font-style: italic;
+  text-align: right;
+}
+
+.reviews-photo-caption::after {
+  content: "";
+  width: 95px;
+  height: 1px;
+  margin-top: 25px;
+  margin-left: auto;
+  background: rgba(255, 250, 242, 0.65);
+}
+
+
+/* ---------------------------------------------------------
+   CARROSSEL
+   --------------------------------------------------------- */
+
+.reviews-carousel {
+  position: relative;
+  width: 100%;
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  z-index: 4;
+}
+
+.review-slide {
+  min-height: 345px;
+  padding: 34px 38px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(90, 23, 37, 0.12);
+  box-shadow: 0 12px 40px rgba(33, 9, 15, 0.025);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.review-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(33, 9, 15, 0.08);
+}
+
+.review-slide-light {
+  background: rgba(250, 248, 244, 0.88);
+}
+
+.review-slide-dark {
+  background: var(--burgundy-dark);
+  color: var(--cream);
+  border-color: transparent;
+}
+
+.review-slide-stars {
+  color: var(--gold);
+  font-size: 17px;
+  letter-spacing: 0.1em;
+}
+
+.review-slide blockquote {
+  margin: 30px 0 35px;
+  color: var(--burgundy-dark);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(24px, 2vw, 30px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.review-slide-dark blockquote {
+  color: var(--cream);
+}
+
+.review-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.review-avatar {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ded4c8;
+  color: var(--burgundy-dark);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.review-person > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.review-person strong {
+  color: var(--burgundy-dark);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+}
+
+.review-person span {
+  color: rgba(32, 26, 27, 0.52);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 14px;
+}
+
+.review-slide-dark .review-person strong {
+  color: var(--cream);
+}
+
+.review-slide-dark .review-person span {
+  color: rgba(244, 239, 232, 0.58);
+}
+
+
+/* ---------------------------------------------------------
+   SETAS
+   --------------------------------------------------------- */
+
+.reviews-arrow {
+  position: absolute;
+  top: 50%;
+  width: 54px;
+  height: 54px;
+  margin-top: -27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(90, 23, 37, 0.28);
+  color: var(--burgundy-dark);
+  font-size: 24px;
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 10;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.reviews-arrow:hover {
+  background: var(--burgundy-dark);
+  color: var(--cream);
+  transform: scale(1.05);
+}
+
+.reviews-arrow-left {
+  left: -78px;
+}
+
+.reviews-arrow-right {
+  right: -78px;
+  background: var(--burgundy-dark);
+  color: var(--cream);
+  border-color: var(--burgundy-dark);
+}
+
+
+/* ---------------------------------------------------------
+   BOLINHAS
+   --------------------------------------------------------- */
+
+.reviews-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  margin: 27px 0 48px;
+}
+
+.reviews-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(90, 23, 37, 0.16);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.reviews-dots span.active {
+  background: var(--burgundy-dark);
+  transform: scale(1.15);
+}
+
+
+/* ---------------------------------------------------------
+   DIFERENCIAIS
+   --------------------------------------------------------- */
+
+.reviews-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.25fr;
+  align-items: center;
+  border-top: 1px solid rgba(90, 23, 37, 0.14);
+  padding-top: 28px;
+}
+
+.reviews-benefit {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-right: 30px;
+  border-right: 1px solid rgba(90, 23, 37, 0.12);
+  color: var(--gold);
+}
+
+.reviews-benefit svg {
+  flex-shrink: 0;
+}
+
+.reviews-benefit span {
+  color: rgba(32, 26, 27, 0.7);
+  font-size: 9px;
+  line-height: 1.7;
+  letter-spacing: 0.22em;
+}
+
+.reviews-google-button {
+  justify-self: end;
+  margin-left: 28px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 58px;
+  padding: 0 28px;
+  background: var(--burgundy-dark) !important;
+  color: var(--cream) !important;
+  border: 0 !important;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.reviews-google-button:hover {
+  transform: translateY(-3px);
+  background: var(--burgundy) !important;
+}
+
+.reviews-google-button .google-letter {
+  font-size: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   ASSINATURA
+   --------------------------------------------------------- */
+
+.reviews-signature {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 48px;
+}
+
+.reviews-signature > span {
+  color: rgba(90, 23, 37, 0.7);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  white-space: nowrap;
+}
+
+.reviews-signature::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(90, 23, 37, 0.18);
+}
+
+.signature-mark {
+  color: rgba(90, 23, 37, 0.12);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 78px;
+  font-style: italic;
+  line-height: 0.6;
+  transform: rotate(-8deg);
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVO
+   --------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .reviews-intro {
+    width: 52%;
+  }
+
+  .reviews-google {
+    left: 53%;
+    width: 350px;
+  }
+
+  .reviews-photo {
+    opacity: 0.65;
+    right: -10vw;
+  }
+
+  .reviews-arrow-left {
+    left: -20px;
+  }
+
+  .reviews-arrow-right {
+    right: -20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .reviews-section {
+    padding: 90px 6vw 60px !important;
+  }
+
+  .reviews-intro {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .reviews-intro h2 {
+    font-size: clamp(55px, 9vw, 78px);
+  }
+
+  .reviews-google {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .reviews-photo {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: 390px;
+    margin-top: 45px;
+  }
+
+  .reviews-photo img {
+    object-position: center 28%;
+  }
+
+  .reviews-photo-caption {
+    right: 35px;
+    top: 130px;
+  }
+
+  .reviews-carousel {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 35px;
+  }
+
+  .review-slide {
+    min-height: 300px;
+  }
+
+  .reviews-arrow {
+    display: none;
+  }
+
+  .reviews-benefits {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .reviews-benefit:nth-child(2) {
+    border-right: 0;
+  }
+
+  .reviews-google-button {
+    justify-self: stretch;
+    margin-left: 0;
+  }
+
+  .reviews-signature {
+    flex-wrap: wrap;
+  }
+
+  .reviews-signature > span {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-section {
+    padding: 75px 6vw 50px !important;
+  }
+
+  .reviews-intro h2 {
+    font-size: clamp(48px, 14vw, 68px);
+  }
+
+  .reviews-intro-text {
+    font-size: 14px;
+  }
+
+  .google-rating > strong {
+    font-size: 76px;
+  }
+
+  .google-stars {
+    font-size: 17px;
+  }
+
+  .reviews-photo {
+    height: 340px;
+  }
+
+  .reviews-photo-caption {
+    right: 20px;
+    top: 105px;
+    font-size: 23px;
+  }
+
+  .review-slide {
+    min-height: 320px;
+    padding: 27px;
+  }
+
+  .review-slide blockquote {
+    font-size: 26px;
+  }
+
+  .reviews-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-benefit {
+    border-right: 0;
+    border-bottom: 1px solid rgba(90, 23, 37, 0.12);
+    padding: 15px 0;
+  }
+
+  .reviews-benefit:last-of-type {
+    border-bottom: 0;
+  }
+
+  .reviews-google-button {
+    margin-top: 15px;
+  }
+
+  .reviews-signature {
+    gap: 15px;
+  }
+
+  .signature-mark {
+    font-size: 58px;
+  }
+}
+/* FOTO — PROPORÇÃO FINAL DA REFERÊNCIA */
+.reviews-photo {
+  top: -135px !important;
+  right: -255px !important;
+  width: 600px !important;
+  height: 780px !important;
+  z-index: 1 !important;
+}
+
+.reviews-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+}
+
+.reviews-photo::after {
+  background:
+    linear-gradient(
+      90deg,
+      var(--cream-light) 0%,
+      rgba(250, 248, 244, 0.58) 14%,
+      rgba(250, 248, 244, 0.16) 40%,
+      transparent 68%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(250, 248, 244, 0.95) 0%,
+      rgba(250, 248, 244, 0.45) 18%,
+      transparent 48%
+    ) !important;
+}
+/* BOLINHAS DO CARROSSEL */
+.reviews-dots button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(90, 23, 37, 0.16);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.reviews-dots button.active {
+  background: var(--burgundy-dark);
+  transform: scale(1.15);
+}
+
+.reviews-dots button:hover {
+  background: var(--burgundy);
+}
+/* AJUSTE — ESPAÇAMENTO DOS DIFERENCIAIS */
+.reviews-benefit {
+  padding-left: 24px;
+  padding-right: 45px;
+}
+
+.reviews-benefit:first-child {
+  padding-left: 0;
 }

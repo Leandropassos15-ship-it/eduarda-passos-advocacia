@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   ArrowRight,
@@ -18,6 +18,33 @@ import { SiTiktok } from "react-icons/si";
 import "./App.css";
 
 function App() {
+  const [reviewIndex, setReviewIndex] = useState(0);
+  const reviewsData = [
+  {
+    name: "ERIBERTO GOMES",
+    info: "1 avaliação",
+    initials: "EG",
+    text: "“Excelente atendimento e profissionalismo. A Dra. Eduarda transmite muita confiança, esclarece todas as dúvidas com clareza e acompanha o processo com dedicação.”",
+  },
+  {
+    name: "JOÃO VITOR",
+    info: "Cliente",
+    initials: "JV",
+    text: "“Excelente profissional! Muito atenciosa, criteriosa e dedicada no que faz. É extremamente prestativa, acompanha de perto o andamento do caso e mantém o cliente sempre bem informado.”",
+  },
+  {
+    name: "MIGUEL ORTIZ",
+    info: "1 avaliação",
+    initials: "MO",
+    text: "“Consegui resolver meu status migratório no Brasil de forma satisfatória. A Dra. Eduarda é uma profissional bem confiável.”",
+  },
+  {
+    name: "ROBERTA",
+    info: "1 avaliação",
+    initials: "R",
+    text: "“Comprometimento, competência, confiança e transparência. Super indico EP advocacia.”",
+  },
+];
   const areasTrackRef = useRef<HTMLDivElement>(null);
 
   const scrollAreas = (direction: "left" | "right") => {
@@ -112,17 +139,17 @@ function App() {
           <div className="hero-copy">
             <p className="eyebrow">MAIS QUE DIREITO.</p>
 
-            <h1>
-              Novos
-              <br />
-              começos.
-            </h1>
+<h1>
+  Assessoria
+  <br />
+  sem fronteiras
+</h1>
 
-            <p className="hero-description">
-              Assessoria jurídica especializada em imigração,
-              nacionalidade, vistos e Direito de Família, com
-              atendimento no Brasil e no exterior.
-            </p>
+<p className="hero-description">
+  Assessoria jurídica e imigratória nas áreas de Direito de Família,
+  Direito Internacional, Direito Civil e Imigração, com atendimento a
+  brasileiros no exterior e regularização de estrangeiros no Brasil.
+</p>
 
             <a href="#contato" className="hero-button">
               <span>Agende sua consulta</span>
@@ -139,7 +166,7 @@ function App() {
           <div className="hero-image-area">
             <div className="hero-image-placeholder">
               <img
-                src="/eduarda-hero.jpg"
+                src="/eduarda-sobre.jpg"
                 alt="Eduarda Passos, advogada"
               />
             </div>
@@ -155,15 +182,13 @@ function App() {
     <p className="section-eyebrow">SOBRE MIM</p>
 
     <h2>
-      Mais do que processos,
+      Quando a vida atravessa fronteiras,
       <br />
-      eu cuido de pessoas.
+      o Direito precisa acompanhar.
     </h2>
 
     <p className="about-description">
-      Sou Eduarda Passos, advogada, atuo com Direito Internacional,
-      Imigração, Nacionalidade, Vistos e Direito de Família, com foco
-      em soluções jurídicas personalizadas e humanizadas.
+      Sou Eduarda Passos, advogada formada pela Universidade Regional do Cariri (URCA), pós-graduada em Direito Internacional, Imigração e Migração pela EB Pós e membro da Comissão de Direito Internacional da OAB/CE.
     </p>
 
     <a href="#contato" className="about-history-button interactive">
@@ -191,9 +216,9 @@ function App() {
       </span>
 
       <span>
-        Atendimento
+        Prevenção de erros
         <br />
-        personalizado
+        e retrabalho
       </span>
     </div>
 
@@ -203,7 +228,7 @@ function App() {
       </span>
 
       <span>
-        Brasil e exterior
+        Atendimento humanizado
       </span>
     </div>
 
@@ -213,9 +238,9 @@ function App() {
       </span>
 
       <span>
-        Estratégia em
+        Análise individual 
         <br />
-        todas as etapas
+        do seu caso
       </span>
     </div>
 
@@ -225,9 +250,9 @@ function App() {
       </span>
 
       <span>
-        Sua história no
+        Organização
         <br />
-        centro da decisão
+        documental
       </span>
     </div>
 
@@ -238,16 +263,17 @@ function App() {
   <div className="about-quote reveal">
 
     <blockquote>
-      “O mundo é grande
+      “A migração é uma expressão
       <br />
-      para quem tem
+      da aspiração humana por dignidade,
       <br />
-      orientação.”
+      segurança e um futuro melhor.”
+    
     </blockquote>
 
     <div className="about-quote-line"></div>
 
-    <span>Eduarda Passos</span>
+    <span>Ban Ki-moon</span>
 
   </div>
 
@@ -258,14 +284,8 @@ function App() {
         
         <div className="areas-header reveal">
           <div>
-            <p className="section-eyebrow">ÁREAS DE ATUAÇÃO</p>
-
-            <h2>
-              Soluções jurídicas
-              <br />
-              para novos caminhos.
-            </h2>
-          </div>
+  <p className="section-eyebrow">ÁREAS DE ATUAÇÃO</p>
+</div>
 
           <p className="areas-description">
             Uma atuação estratégica para questões que atravessam
@@ -285,30 +305,27 @@ function App() {
   <div className="areas-track" ref={areasTrackRef}>
     <article className="area-card area-card-1 reveal">
       <span>01</span>
-      <h3>Imigração</h3>
+      <h3>Imigração e Regularização no Brasil</h3>
       <p>
-        Orientação jurídica para processos e estratégias
-        relacionadas à imigração.
+        Assessoria para estrangeiros que desejam viver, trabalhar ou regularizar sua situação no Brasil.
       </p>
       <ArrowRight size={20} strokeWidth={1.5} />
     </article>
 
     <article className="area-card area-card-2 reveal">
       <span>02</span>
-      <h3>Nacionalidade</h3>
+      <h3>Vistos Internacionais</h3>
       <p>
-        Assessoria em processos de reconhecimento e obtenção
-        de nacionalidade.
+        Atuação em processos relacionados a países como Reino Unido, Estados Unidos e Portugal, incluindo vistos familiares, profissionais e outras categorias migratórias.
       </p>
       <ArrowRight size={20} strokeWidth={1.5} />
     </article>
 
     <article className="area-card area-card-3 reveal">
       <span>03</span>
-      <h3>Naturalização</h3>
+      <h3>Nacionalidade e Naturalização</h3>
       <p>
-        Acompanhamento jurídico para processos de naturalização
-        em diferentes contextos.
+        Orientação jurídica para processos de nacionalidade e naturalização, análise dos requisitos, documentos necessários e acompanhamento das etapas correspondentes no Brasil ou no exterior.
       </p>
       <ArrowRight size={20} strokeWidth={1.5} />
     </article>
@@ -317,18 +334,17 @@ function App() {
       <span>04</span>
       <h3>Vistos</h3>
       <p>
-        Orientação sobre possibilidades e procedimentos
-        relacionados a vistos.
+         Direito de Família Internacional
+Atuação em questões como divórcio internacional, guarda de filhos, pensão alimentícia, pacto antenupcial, autorizações envolvendo menores e outras demandas familiares com elementos estrangeiros.
       </p>
       <ArrowRight size={20} strokeWidth={1.5} />
     </article>
 
     <article className="area-card area-card-5 reveal">
       <span>05</span>
-      <h3>Direito de Família</h3>
+      <h3> Brasileiros no Exterior e Documentos Internacionais</h3>
       <p>
-        Assessoria jurídica para questões familiares no Brasil
-        e em contextos internacionais.
+        Orientação em procedimentos no consulado como passaporte brasileiro, documentos internacionais e questões civis que envolvam Brasil e exterior, casamento por procuração e transcrição no Brasil de casamento realizado no exterior.
       </p>
       <ArrowRight size={20} strokeWidth={1.5} />
     </article>
@@ -345,178 +361,367 @@ function App() {
       </section>
       {/* ATUAÇÃO INTERNACIONAL */}
 <section className="international-section">
-  <div className="international-content reveal">
-    <p className="section-eyebrow">ATUAÇÃO INTERNACIONAL</p>
+  <div className="international-main reveal">
+    <div className="international-copy">
+      <p className="section-eyebrow">ATUAÇÃO INTERNACIONAL</p>
 
-    <h2>
-      Conectando você
-      <br />
-      ao mundo.
-    </h2>
+      <h2>
+        Regularização
+        <br />
+        migratória
+        <br />
+        no Brasil.
+      </h2>
 
-    <p className="international-text">
-      Com uma visão global e conhecimento em diferentes jurisdições,
-      ofereço suporte jurídico para brasileiros no exterior e
-      estrangeiros no Brasil.
-    </p>
-  </div>
+      <p className="international-text">
+        Auxiliamos estrangeiros que desejam morar, trabalhar,
+        constituir família ou regularizar sua situação migratória
+        no Brasil, com orientação jurídica personalizada em todas
+        as etapas aplicáveis.
+      </p>
 
-  <div className="international-visual reveal">
-    <div className="international-circle">
-      <div className="passport-icon">
-        <span className="passport-symbol">✦</span>
-        <span className="passport-title">PASSAPORTE</span>
-      </div>
-
-      <div className="airplane-icon">✈</div>
+      <a href="#contato" className="international-button interactive">
+        <span>FALAR COM A ADVOGADA</span>
+        <ArrowRight size={18} strokeWidth={1.5} />
+      </a>
     </div>
 
-    <div className="international-orbit orbit-one"></div>
-    <div className="international-orbit orbit-two"></div>
+    <div className="international-visual">
+      <div className="international-orbit orbit-one"></div>
+      <div className="international-orbit orbit-two"></div>
+
+      <img
+  src="/passaporte.png"
+  alt="Passaporte brasileiro"
+  className="passport-image"
+/>
+      <div className="international-caption">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div className="international-services">
+      <p className="services-title">NOSSOS SERVIÇOS</p>
+
+      <div className="service-list">
+        <div className="service-item">
+          <span>⌂</span>
+          <p>Autorização de Residência no Brasil</p>
+        </div>
+
+        <div className="service-item">
+          <span>▤</span>
+          <p>Registro Migratório de Estrangeiro no Brasil</p>
+        </div>
+
+        <div className="service-item">
+          <span>▦</span>
+          <p>Prorrogação de Estada</p>
+        </div>
+
+        <div className="service-item">
+          <span>▤</span>
+          <p>Certidão de Movimentos Migratórios</p>
+        </div>
+
+        <div className="service-item">
+          <span>♧</span>
+          <p>Naturalização Brasileira</p>
+        </div>
+
+        <div className="service-item">
+          <span>▣</span>
+          <p>Autorização de Residência para fins de trabalho</p>
+        </div>
+
+        <div className="service-item">
+          <span>▭</span>
+          <p>Autorização de Residência para Nômades Digitais</p>
+        </div>
+
+        <div className="service-item">
+          <span>✈</span>
+          <p>Autorização de Viagem para Crianças e Adolescentes</p>
+        </div>
+
+        <div className="service-item">
+          <span>▣</span>
+          <p>Emissão e regularização de CPF para estrangeiros</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-      {/* CONTEÚDOS */}
-      <section className="content-section" id="conteudos">
-        <div className="content-header reveal">
+      {/* COMO PODEMOS AJUDAR */}
+<section className="help-section" id="ajuda">
+  <div className="help-header reveal">
+    <div>
+      <p className="section-eyebrow">COMO PODEMOS AJUDAR?</p>
+
+      <h2>
+        Encontre o atendimento
+        <br />
+        adequado para o seu caso.
+      </h2>
+    </div>
+  </div>
+
+  <div className="help-grid">
+    <article className="help-card reveal">
+      <span className="help-number">01</span>
+
+      <div>
+        <h3>Quero morar ou trabalhar no exterior</h3>
+
+        <p>
+          Vistos, residência e processos migratórios para Reino Unido,
+          Estados Unidos e Portugal.
+        </p>
+      </div>
+
+      <ArrowRight size={20} strokeWidth={1.5} />
+    </article>
+
+    <article className="help-card help-card-dark reveal">
+      <span className="help-number">02</span>
+
+      <div>
+        <h3>Sou estrangeiro e preciso me regularizar no Brasil</h3>
+
+        <p>
+          Residência, registro migratório, CPF, naturalização e outros
+          procedimentos.
+        </p>
+      </div>
+
+      <ArrowRight size={20} strokeWidth={1.5} />
+    </article>
+
+    <article className="help-card reveal">
+      <span className="help-number">03</span>
+
+      <div>
+        <h3>Tenho uma questão familiar entre dois países</h3>
+
+        <p>
+          Divórcio, guarda, pensão, pacto antenupcial, casamento e
+          autorizações para menores.
+        </p>
+      </div>
+
+      <ArrowRight size={20} strokeWidth={1.5} />
+    </article>
+
+    <article className="help-card reveal">
+      <span className="help-number">04</span>
+
+      <div>
+        <h3>Preciso resolver documentos entre Brasil e exterior</h3>
+
+        <p>
+          Passaporte, transcrição de casamento, casamento por procuração
+          e outros documentos com efeitos internacionais.
+        </p>
+      </div>
+
+      <ArrowRight size={20} strokeWidth={1.5} />
+    </article>
+  </div>
+
+  <div className="help-cta reveal">
+    <p>
+      Não encontrou exatamente o que procura?
+    </p>
+
+    <a
+      href="https://wa.me/558598391959"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="help-whatsapp"
+    >
+      <span>Falar sobre o caso em específico</span>
+      <FaWhatsapp size={18} />
+    </a>
+  </div>
+</section>
+{/* AVALIAÇÕES */}
+<section className="reviews-section" id="avaliacoes">
+  <div className="reviews-editorial">
+
+    {/* CABEÇALHO */}
+    <div className="reviews-intro reveal">
+      <p className="section-eyebrow">AVALIAÇÕES REAIS</p>
+
+      <h2>
+        A confiança dos
+        <br />
+        nossos clientes
+        <br />
+        fala por nós.
+      </h2>
+
+      <p className="reviews-intro-text">
+        São pessoas e famílias que confiaram em nosso trabalho
+        e hoje vivem novas histórias, em novos destinos.
+      </p>
+    </div>
+
+    {/* NOTA GOOGLE */}
+    <div className="reviews-google reveal">
+      <p className="google-label">AVALIAÇÃO NO GOOGLE</p>
+
+      <div className="google-rating">
+        <strong>4,8</strong>
+
+        <div className="google-rating-info">
+          <div className="google-stars">★★★★★</div>
+          <span>19 avaliações</span>
+        </div>
+      </div>
+
+      <a
+        href="https://www.google.com/maps/place/EP+Advocacia+e+Assessoria+Imigrat%C3%B3ria/@-3.7727251,-38.4780859,17z/data=!4m16!1m9!3m8!1s0x7c745ddba4a031d:0x6a963d5b8caf9358!2sEP+Advocacia+e+Assessoria+Imigrat%C3%B3ria!8m2!3d-3.7727251!4d-38.4780859!9m1!1b1!16s%2Fg%2F11ybvv3gq0!3m5!1s0x7c745ddba4a031d:0x6a963d5b8caf9358!8m2!3d-3.7727251!4d-38.4780859!16s%2Fg%2F11ybvv3gq0?entry=ttu"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="google-profile-link"
+      >
+        <span className="google-letter">G</span>
+
+        <span className="google-profile-text">
+          <strong>EP Advocacia e Assessoria Imigratória</strong>
+          <small>VER AVALIAÇÕES NO GOOGLE →</small>
+        </span>
+      </a>
+    </div>
+
+    {/* FOTO */}
+    <div className="reviews-photo reveal">
+      <img
+        src="/eduarda-sobre.jpg"
+        alt="Eduarda Passos, advogada"
+      />
+    </div>
+
+    {/* DEPOIMENTOS */}
+    <div className="reviews-carousel reveal">
+
+  <button
+    type="button"
+    className="reviews-arrow reviews-arrow-left"
+    aria-label="Avaliação anterior"
+    onClick={() =>
+      setReviewIndex(
+        (reviewIndex - 1 + reviewsData.length) % reviewsData.length
+      )
+    }
+  >
+    ←
+  </button>
+
+  {[0, 1, 2].map((offset) => {
+    const review =
+      reviewsData[(reviewIndex + offset) % reviewsData.length];
+
+    return (
+      <article
+        key={`${review.name}-${reviewIndex}-${offset}`}
+        className={`review-slide ${
+          offset === 1
+            ? "review-slide-dark"
+            : "review-slide-light"
+        }`}
+      >
+        <div className="review-slide-stars">★★★★★</div>
+
+        <blockquote>{review.text}</blockquote>
+
+        <div className="review-person">
+          <div className="review-avatar">
+            {review.initials}
+          </div>
+
           <div>
-            <p className="section-eyebrow">CONTEÚDOS</p>
-
-            <h2>
-              Informação para
-              <br />
-              novas decisões.
-            </h2>
-          </div>
-
-          <p className="content-description">
-            Conteúdos jurídicos para ajudar você a compreender seus
-            direitos, possibilidades e os próximos passos da sua história.
-          </p>
-        </div>
-
-        <div className="content-grid">
-          <article className="content-card reveal">
-            <span className="content-number">01</span>
-
-            <div>
-              <p className="content-category">IMIGRAÇÃO</p>
-
-              <h3>
-                Antes de
-                <br />
-                mudar de país.
-              </h3>
-
-              <p>
-                Informações importantes para quem está planejando viver,
-                estudar ou trabalhar no exterior.
-              </p>
-            </div>
-
-            <a
-              href="https://www.youtube.com/@Adv.eduardapassos"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Ver conteúdos</span>
-              <ArrowRight size={17} strokeWidth={1.5} />
-            </a>
-          </article>
-
-          <article className="content-card content-card-dark reveal">
-            <span className="content-number">02</span>
-
-            <div>
-              <p className="content-category">NACIONALIDADE</p>
-
-              <h3>
-                Seus direitos
-                <br />
-                além das fronteiras.
-              </h3>
-
-              <p>
-                Conteúdos sobre nacionalidade, naturalização e questões
-                jurídicas relacionadas à vida internacional.
-              </p>
-            </div>
-
-            <a
-              href="https://www.tiktok.com/@adv.eduardapassos"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Ver conteúdos</span>
-              <ArrowRight size={17} strokeWidth={1.5} />
-            </a>
-          </article>
-
-          <article className="content-card reveal">
-            <span className="content-number">03</span>
-
-            <div>
-              <p className="content-category">DIREITO DE FAMÍLIA</p>
-
-              <h3>
-                Direito que
-                <br />
-                acolhe histórias.
-              </h3>
-
-              <p>
-                Reflexões e orientações sobre questões familiares no Brasil
-                e em contextos internacionais.
-              </p>
-            </div>
-
-            <a
-              href="https://www.instagram.com/adv.eduardapassos/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Ver conteúdos</span>
-              <ArrowRight size={17} strokeWidth={1.5} />
-            </a>
-          </article>
-        </div>
-
-        <div className="content-social reveal">
-          <h3>
-            Acompanhe
-            <br />
-            meu trabalho.
-          </h3>
-
-          <div className="content-social-links">
-            <a
-              href="https://www.instagram.com/adv.eduardapassos/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram size={16} />
-              <span>Instagram</span>
-            </a>
-
-            <a
-              href="https://www.tiktok.com/@adv.eduardapassos"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SiTiktok size={15} />
-              <span>TikTok</span>
-            </a>
-
-            <a
-              href="https://www.youtube.com/@Adv.eduardapassos"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube size={17} />
-              <span>YouTube</span>
-            </a>
+            <strong>{review.name}</strong>
+            <span>{review.info}</span>
           </div>
         </div>
-      </section>
+      </article>
+    );
+  })}
+
+  <button
+    type="button"
+    className="reviews-arrow reviews-arrow-right"
+    aria-label="Próxima avaliação"
+    onClick={() =>
+      setReviewIndex(
+        (reviewIndex + 1) % reviewsData.length
+      )
+    }
+  >
+    →
+  </button>
+
+</div>
+
+    {/* INDICADORES */}
+    <div className="reviews-dots reveal">
+  {reviewsData.map((_, index) => (
+    <button
+      key={index}
+      type="button"
+      className={reviewIndex === index ? "active" : ""}
+      aria-label={`Ir para avaliação ${index + 1}`}
+      onClick={() => setReviewIndex(index)}
+    />
+  ))}
+</div>
+
+    {/* DIFERENCIAIS */}
+    <div className="reviews-benefits reveal">
+
+      <div className="reviews-benefit">
+        <Scale size={30} strokeWidth={1.2} />
+        <span>
+          ATENDIMENTO
+          <br />
+          DE EXCELÊNCIA
+        </span>
+      </div>
+
+      <div className="reviews-benefit">
+        <Users size={30} strokeWidth={1.3} />
+        <span>
+          SEGURANÇA
+          <br />
+          EM CADA PROCESSO
+        </span>
+      </div>
+
+      <div className="reviews-benefit">
+        <Globe2 size={30} strokeWidth={1.2} />
+        <span>
+          SUPORTE EM
+          <br />
+          NOVOS COMEÇOS
+        </span>
+      </div>
+
+    </div>
+
+    {/* FRASE FINAL */}
+    <div className="reviews-signature reveal">
+      <span>
+        “CONFIANÇA TAMBÉM SE CONSTRÓI COM RESULTADOS REAIS.”
+      </span>
+
+      <div className="signature-mark">EP</div>
+    </div>
+
+  </div>
+</section>
 {/* DEPOIMENTO + CTA */}
 <section className="quote-cta-section">
   <div className="quote-block reveal">
