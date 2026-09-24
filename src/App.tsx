@@ -166,7 +166,7 @@ function App() {
           <div className="hero-image-area">
             <div className="hero-image-placeholder">
               <img
-                src="/eduarda-sobre.jpg"
+                src="/eduarda-hero.jpeg"
                 alt="Eduarda Passos, advogada"
               />
             </div>
@@ -201,7 +201,7 @@ function App() {
   {/* FOTO */}
   <div className="about-photo reveal">
     <img
-      src="/eduarda-sobre.jpg"
+      src="/eduarda-hero.jpg"
       alt="Eduarda Passos"
     />
   </div>
@@ -280,85 +280,161 @@ function App() {
 </section>
 
       {/* ÁREAS DE ATUAÇÃO */}
-      <section className="areas-section" id="atuacao">
-        
-        <div className="areas-header reveal">
-          <div>
-  <p className="section-eyebrow">ÁREAS DE ATUAÇÃO</p>
-</div>
+<section className="areas-section" id="atuacao">
 
-          <p className="areas-description">
-            Uma atuação estratégica para questões que atravessam
-            fronteiras, famílias e diferentes momentos da vida.
-          </p>
-        </div>
+  <div className="areas-header reveal">
+    <div>
+      <p className="section-eyebrow">ÁREAS DE ATUAÇÃO</p>
+    </div>
 
-        <div className="areas-carousel">
-  <button
-  className="areas-arrow areas-arrow-left"
-  aria-label="Áreas anteriores"
-  onClick={() => scrollAreas("left")}
->
-  ←
-</button>
-
-  <div className="areas-track" ref={areasTrackRef}>
-    <article className="area-card area-card-1 reveal">
-      <span>01</span>
-      <h3>Imigração e Regularização no Brasil</h3>
-      <p>
-        Assessoria para estrangeiros que desejam viver, trabalhar ou regularizar sua situação no Brasil.
-      </p>
-      <ArrowRight size={20} strokeWidth={1.5} />
-    </article>
-
-    <article className="area-card area-card-2 reveal">
-      <span>02</span>
-      <h3>Vistos Internacionais</h3>
-      <p>
-        Atuação em processos relacionados a países como Reino Unido, Estados Unidos e Portugal, incluindo vistos familiares, profissionais e outras categorias migratórias.
-      </p>
-      <ArrowRight size={20} strokeWidth={1.5} />
-    </article>
-
-    <article className="area-card area-card-3 reveal">
-      <span>03</span>
-      <h3>Nacionalidade e Naturalização</h3>
-      <p>
-        Orientação jurídica para processos de nacionalidade e naturalização, análise dos requisitos, documentos necessários e acompanhamento das etapas correspondentes no Brasil ou no exterior.
-      </p>
-      <ArrowRight size={20} strokeWidth={1.5} />
-    </article>
-
-    <article className="area-card area-card-4 reveal">
-      <span>04</span>
-      <h3>Vistos</h3>
-      <p>
-         Direito de Família Internacional
-Atuação em questões como divórcio internacional, guarda de filhos, pensão alimentícia, pacto antenupcial, autorizações envolvendo menores e outras demandas familiares com elementos estrangeiros.
-      </p>
-      <ArrowRight size={20} strokeWidth={1.5} />
-    </article>
-
-    <article className="area-card area-card-5 reveal">
-      <span>05</span>
-      <h3> Brasileiros no Exterior e Documentos Internacionais</h3>
-      <p>
-        Orientação em procedimentos no consulado como passaporte brasileiro, documentos internacionais e questões civis que envolvam Brasil e exterior, casamento por procuração e transcrição no Brasil de casamento realizado no exterior.
-      </p>
-      <ArrowRight size={20} strokeWidth={1.5} />
-    </article>
+    <p className="areas-description">
+      Uma atuação estratégica para questões que atravessam
+      fronteiras, famílias e diferentes momentos da vida.
+    </p>
   </div>
 
-  <button
-  className="areas-arrow areas-arrow-right"
-  aria-label="Próximas áreas"
-  onClick={() => scrollAreas("right")}
+  <div className="areas-carousel">
+
+    {/* SETA ESQUERDA */}
+    <button
+      className="areas-arrow areas-arrow-left"
+      aria-label="Áreas anteriores"
+      onClick={() => scrollAreas("left")}
+    >
+      ←
+    </button>
+
+    <div className="areas-track" ref={areasTrackRef}>
+
+      {/* CARD 01 — IMIGRAÇÃO */}
+      <article
+        className="area-card area-card-1 reveal"
+        style={{
+          backgroundImage: "url('/Card-1imi.png')",
+        }}
+      >
+        <span>01</span>
+
+        <h3>
+          Imigração e Regularização no Brasil
+        </h3>
+
+        <p>
+          Assessoria para estrangeiros que desejam viver,
+          trabalhar ou regularizar sua situação no Brasil.
+        </p>
+
+        <ArrowRight size={20} strokeWidth={1.5} />
+      </article>
+
+
+      {/* CARD 02 — VISTOS INTERNACIONAIS */}
+      <article
+        className="area-card area-card-2 reveal"
+        style={{
+          backgroundImage: "url('/Card-2Vistos.png')",
+        }}
+      >
+        <span>02</span>
+
+        <h3>
+          Vistos Internacionais
+        </h3>
+
+        <p>
+          Atuação em processos relacionados a países como
+          Reino Unido, Estados Unidos e Portugal, incluindo
+          vistos familiares, profissionais e outras categorias
+          migratórias.
+        </p>
+
+        <ArrowRight size={20} strokeWidth={1.5} />
+      </article>
+
+
+      {/* CARD 03 — NACIONALIDADE E NATURALIZAÇÃO */}
+<article
+  className="area-card area-card-3 reveal"
+  style={{
+    backgroundImage: "url('/Card-3Nacio.png')",
+  }}
 >
-  →
-</button>
-</div>
-      </section>
+  <span>03</span>
+
+  <h3>
+    Nacionalidade e Naturalização
+  </h3>
+
+  <p>
+    Orientação jurídica para processos de nacionalidade
+    e naturalização, análise dos requisitos, documentos
+    necessários e acompanhamento das etapas
+    correspondentes no Brasil ou no exterior.
+  </p>
+
+  <ArrowRight size={20} strokeWidth={1.5} />
+</article>
+
+
+      {/* CARD 04 — DIREITO DE FAMÍLIA INTERNACIONAL */}
+<article
+  className="area-card area-card-4 reveal"
+  style={{
+    backgroundImage: "url('/Card-4Vist.png')",
+  }}
+>
+  <span>04</span>
+
+  <h3>
+    Vistos
+  </h3>
+
+  <p>
+    Direito de Família Internacional Atuação em questões como divórcio internacional, guarda de filhos, pensão alimentícia, pacto antenupcial, autorizações envolvendo menores e outras demandas familiares com elementos estrangeiros.
+  </p>
+
+  <ArrowRight size={20} strokeWidth={1.5} />
+</article>
+
+
+      {/* CARD 05 — BRASILEIROS NO EXTERIOR */}
+      <article
+        className="area-card area-card-5 reveal"
+        style={{
+          backgroundImage: "url('/Card-5Bra.png')",
+        }}
+      >
+        <span>05</span>
+
+        <h3>
+          Brasileiros no Exterior e Documentos Internacionais
+        </h3>
+
+        <p>
+          Orientação em procedimentos no consulado como
+          passaporte brasileiro, documentos internacionais e
+          questões civis que envolvam Brasil e exterior,
+          casamento por procuração e transcrição no Brasil
+          de casamento realizado no exterior.
+        </p>
+
+        <ArrowRight size={20} strokeWidth={1.5} />
+      </article>
+
+    </div>
+
+    {/* SETA DIREITA */}
+    <button
+      className="areas-arrow areas-arrow-right"
+      aria-label="Próximas áreas"
+      onClick={() => scrollAreas("right")}
+    >
+      →
+    </button>
+
+  </div>
+
+</section>
       {/* ATUAÇÃO INTERNACIONAL */}
 <section className="international-section">
   <div className="international-main reveal">

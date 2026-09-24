@@ -917,20 +917,30 @@
   transform: scale(1.04);
 }
 
+.area-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .area-card-1::before {
-  background-image: url("/IMG_3165.JPG.jpeg");
+  background-image: url("/Card-1imi.png");
 }
 
 .area-card-2::before {
-  background-image: url("/IMG_3169.JPG.jpeg");
+  background-image: url("/Card-2Vistos.png");
+  .area-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 }
 
 .area-card-3::before {
-  background-image: url("/IMG_3170.JPG.jpeg");
+  background-image: url("/Card-3Nacio.png");
 }
 
 .area-card-4::before {
-  background-image: url("/eduarda-hero.jpg");
+  background-image: url("/Card-4Vist.png");
 }
 
 .area-card-5::before {
@@ -940,13 +950,16 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 18px;
+  width: 100%;
 }
 
 .areas-track {
   display: flex;
+  flex: 1;
+  min-width: 0;
   gap: 14px;
-  width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -1795,7 +1808,7 @@
   grid-column: 2 !important;
   grid-row: 1 !important;
   width: 100% !important;
-  height: 500px !important;
+  height: 599px !important;
 }
 
 .about-highlights {
