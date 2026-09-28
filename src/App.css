@@ -606,19 +606,42 @@
 /* DIFERENCIAIS */
 
 .about-highlights {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-  padding: 0;
-  min-width: 0;
+  order: 3 !important;
+
+  width: 100% !important;
+
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px 18px !important;
+
+  padding: 0 !important;
 }
 
 .about-highlight {
-  display: block;
-  color: var(--text);
-  font-size: 13px;
-  line-height: 1.45;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+
+  color: var(--text) !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+.about-highlight .highlight-icon {
+  flex: 0 0 28px !important;
+  width: 28px !important;
+  height: 28px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  color: var(--burgundy) !important;
+}
+
+.about-highlight > span:last-child {
+  display: block !important;
+  color: var(--text) !important;
 }
 
 /* FRASE */
@@ -3436,4 +3459,475 @@
 
 .reviews-benefit:first-child {
   padding-left: 0;
+}
+/* =========================================================
+   MOBILE — SOBRE MIM
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-section {
+    min-height: auto !important;
+    padding: 70px 6vw 75px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+
+    align-items: stretch !important;
+  }
+
+  /* TEXTO */
+  .about-intro {
+    width: 100% !important;
+    max-width: none !important;
+
+    order: 1 !important;
+  }
+
+  .about-intro h2 {
+    margin-bottom: 24px !important;
+    font-size: clamp(48px, 14vw, 66px) !important;
+    line-height: 0.9 !important;
+  }
+
+  .about-description {
+    max-width: none !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .about-history-button {
+    margin-top: 22px !important;
+  }
+
+  /* FOTO */
+  .about-photo {
+    order: 2 !important;
+
+    width: 100% !important;
+    height: 430px !important;
+  }
+
+  /* DIFERENCIAIS */
+  .about-highlights {
+    order: 3 !important;
+
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px 18px !important;
+
+    padding: 0 !important;
+  }
+
+  .about-highlight {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .highlight-icon {
+    flex-shrink: 0 !important;
+  }
+
+  /* FRASE */
+  .about-quote {
+    order: 4 !important;
+
+    width: 100% !important;
+    min-height: auto !important;
+
+    padding: 30px 0 0 !important;
+
+    border-left: 0 !important;
+    border-top: 1px solid rgba(90, 23, 37, 0.28) !important;
+  }
+
+  .about-quote blockquote {
+    font-size: 36px !important;
+    line-height: 0.98 !important;
+  }
+
+  .about-quote-line {
+    margin: 26px 0 14px !important;
+  }
+
+  .about-quote > span {
+    font-size: 25px !important;
+  }
+}
+/* =========================================
+   MOBILE — ATUAÇÃO INTERNACIONAL
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .international-section {
+    padding: 70px 6vw 75px !important;
+    overflow: hidden !important;
+  }
+
+  .international-main {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 42px !important;
+    width: 100% !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+  }
+
+  .international-copy {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .international-copy h2 {
+    font-size: clamp(48px, 14vw, 64px) !important;
+    line-height: 0.92 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .international-text {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .international-button {
+    margin-top: 24px !important;
+    width: 100% !important;
+    max-width: 290px !important;
+  }
+
+  /* PASSAPORTE */
+
+  .international-visual {
+    width: 100% !important;
+    height: 300px !important;
+    min-height: 300px !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  .passport-image {
+    position: relative !important;
+    width: 210px !important;
+    height: auto !important;
+    max-width: 75% !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: rotate(-10deg) !important;
+    z-index: 2 !important;
+  }
+
+  .international-orbit {
+    position: absolute !important;
+  }
+
+  .international-services {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 22px 18px !important;
+  }
+
+  .service-item {
+    min-height: 58px !important;
+    grid-template-columns: 26px 1fr !important;
+    gap: 10px !important;
+  }
+
+  .service-item p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+}
+/* =========================================
+   MOBILE — AVALIAÇÕES
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .reviews-section {
+    padding: 70px 6vw 60px !important;
+    overflow: hidden !important;
+  }
+
+  .reviews-editorial {
+    width: 100% !important;
+    max-width: none !important;
+  }
+/* =========================================
+   MOBILE — CARDS DE AVALIAÇÕES COMPACTOS
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .review-slide {
+    min-height: 225px !important;
+    height: auto !important;
+    padding: 22px 22px 20px !important;
+    justify-content: space-between !important;
+  }
+
+  .review-slide-stars {
+    font-size: 14px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .review-slide blockquote {
+    margin: 16px 0 20px !important;
+    font-size: 22px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  .review-person {
+    gap: 10px !important;
+  }
+
+  .review-avatar {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 9px !important;
+  }
+
+  .review-person strong {
+    font-size: 9px !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  .review-person span {
+    font-size: 12px !important;
+  }
+
+  .reviews-dots {
+    margin: 18px 0 35px !important;
+    gap: 10px !important;
+  }
+
+}
+  /* CABEÇALHO */
+
+  .reviews-intro {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .reviews-intro h2 {
+    font-size: clamp(48px, 14vw, 66px) !important;
+    line-height: 0.9 !important;
+  }
+
+  .reviews-intro-text {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* GOOGLE */
+
+  .reviews-google {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    margin-top: 42px !important;
+  }
+
+  .google-rating > strong {
+    font-size: 76px !important;
+  }
+
+  /* FOTO */
+
+  .reviews-photo {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: 280px !important;
+    margin-top: 40px !important;
+    z-index: 1 !important;
+    overflow: hidden !important;
+  }
+
+  .reviews-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;
+  }
+
+  .reviews-photo::after {
+    display: block !important;
+  }
+
+  /* CARROSSEL */
+
+  .reviews-carousel {
+    width: 100% !important;
+    margin-top: 28px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .review-slide {
+    min-height: 300px !important;
+    padding: 27px !important;
+  }
+
+  .review-slide blockquote {
+    font-size: 26px !important;
+    line-height: 1.05 !important;
+  }
+
+  .reviews-arrow {
+    display: none !important;
+  }
+
+  /* BOLINHAS */
+
+  .reviews-dots {
+    margin-top: 22px !important;
+  }
+
+  /* BENEFÍCIOS */
+
+  .reviews-benefits {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    margin-top: 38px !important;
+  }
+
+  .reviews-benefit {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(90, 23, 37, 0.12) !important;
+    padding: 18px 0 !important;
+  }
+
+  .reviews-benefit:last-child {
+    border-bottom: 0 !important;
+  }
+
+  /* ASSINATURA */
+
+  .reviews-signature {
+    margin-top: 38px !important;
+    gap: 15px !important;
+  }
+
+  .reviews-signature > span {
+    white-space: normal !important;
+  }
+
+  .signature-mark {
+    font-size: 58px !important;
+  }
+}
+/* =========================================
+   MOBILE — CARROSSEL HORIZONTAL DE AVALIAÇÕES
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .reviews-carousel {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 14px !important;
+
+    width: calc(100% + 6vw) !important;
+    padding: 5px 6vw 12px 6vw !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+
+    padding: 5px 6vw 12px 0 !important;
+
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .reviews-carousel::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .review-slide {
+    flex: 0 0 86% !important;
+    width: 86% !important;
+    min-width: 86% !important;
+    min-height: 225px !important;
+
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+
+    padding: 22px !important;
+  }
+
+  /* Não deixa o card seguinte aparecer demais */
+  .review-slide:last-child {
+    margin-right: 6vw !important;
+  }
+
+  /* As setas não são necessárias no toque */
+  .reviews-arrow {
+    display: none !important;
+  }
+
+}
+@media (min-width: 701px) {
+  .reviews-carousel .review-slide:nth-of-type(4) {
+    display: none;
+  }
+}
+/* =========================================
+   MOBILE — CARROSSEL COMO PODEMOS AJUDAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .help-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 14px !important;
+
+    width: calc(100% + 12vw) !important;
+    margin-left: -6vw !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+
+    padding: 5px 6vw 15px !important;
+
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .help-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .help-card {
+    flex: 0 0 86% !important;
+    width: 86% !important;
+    min-width: 86% !important;
+
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+  }
+
 }

@@ -19,6 +19,22 @@ import "./App.css";
 
 function App() {
   const [reviewIndex, setReviewIndex] = useState(0);
+  const reviewsTrackRef = useRef<HTMLDivElement>(null);
+
+const handleReviewsScroll = () => {
+  const track = reviewsTrackRef.current;
+
+  if (!track) return;
+
+  const cards = track.querySelectorAll(".review-slide");
+
+  if (!cards.length) return;
+
+  const cardWidth = cards[0].clientWidth + 14;
+  const index = Math.round(track.scrollLeft / cardWidth);
+
+  setReviewIndex(Math.min(index, cards.length - 1));
+};
   const reviewsData = [
   {
     name: "ERIBERTO GOMES",
@@ -681,7 +697,11 @@ function App() {
     </div>
 
     {/* DEPOIMENTOS */}
-    <div className="reviews-carousel reveal">
+    <div
+  className="reviews-carousel reveal"
+  ref={reviewsTrackRef}
+  onScroll={handleReviewsScroll}
+>
 
   <button
     type="button"
@@ -696,7 +716,7 @@ function App() {
     ←
   </button>
 
-  {[0, 1, 2].map((offset) => {
+ {[0, 1, 2, 3].map((offset) => {
     const review =
       reviewsData[(reviewIndex + offset) % reviewsData.length];
 
