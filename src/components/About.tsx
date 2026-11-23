@@ -24,11 +24,11 @@ function About() {
         <div className="about-media reveal">
           <figure className="about-portrait">
             <Picture
-              base="/img/eduarda-retrato"
+              base="/img/eduarda-sobre-blazer"
               widths={[640, 1000]}
               sizes="(max-width: 900px) 92vw, 520px"
               width={1000}
-              height={1190}
+              height={1500}
               alt="Retrato de Eduarda Passos"
             />
           </figure>

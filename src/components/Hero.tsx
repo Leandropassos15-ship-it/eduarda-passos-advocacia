@@ -46,12 +46,12 @@ function Hero() {
         <div className="hero-stage reveal">
           <figure className="hero-photo">
             <Picture
-              base="/img/eduarda-cadeira"
-              widths={[640, 1100]}
+              base="/img/eduarda-hero-vinho"
+              widths={[640, 1100, 1600]}
               sizes="(max-width: 760px) 100vw, 1100px"
               width={1100}
               height={1650}
-              alt="Eduarda Passos, advogada, sentada em uma poltrona"
+              alt="Eduarda Passos, advogada, de vestido vinho, apoiada em uma poltrona"
               priority
             />
           </figure>

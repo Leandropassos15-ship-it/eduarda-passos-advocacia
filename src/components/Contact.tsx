@@ -10,7 +10,7 @@ function Contact() {
         <div className="contact-card reveal">
           <figure className="contact-photo">
             <Picture
-              base="/img/eduarda-perfil"
+              base="/img/eduarda-contato-azul"
               widths={[640, 1100]}
               sizes="(max-width: 900px) 92vw, 480px"
               width={1100}
